@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>FamilySafe · Xóa tài khoản</title>
+  <link rel="stylesheet" href="../assets/style.css"/>
+</head>
+<body>
+<main class="narrow">
+  <nav><a href="../privacy/">Quyền riêng tư</a> · <a href="../terms/">Điều khoản</a></nav>
+  <h1>Xóa tài khoản FamilySafe</h1>
+  <div class="card">
+    <p>Xóa tài khoản sẽ xóa hồ sơ bố/mẹ, hồ sơ con do bạn sở hữu, vị trí, thời gian dùng app, lịch, khu vực và phiên đăng nhập. Không khôi phục được.</p>
+    <h2>Cách 1 — Trong app (nhanh)</h2>
+    <p>Mở FamilySafe → Cài đặt → Xóa tài khoản. Tick xác nhận, gõ <strong>XOA</strong>. Dữ liệu trên máy chủ bị xóa ngay.</p>
+    <h2>Cách 2 — Gửi yêu cầu trên web</h2>
+    <p>Điền email đã đăng ký. Chúng tôi nhận yêu cầu qua hộp thư hỗ trợ và xóa tài khoản cùng dữ liệu trên máy chủ (thường trong 48 giờ, tối đa 7 ngày).</p>
+    <form id="delete-form">
+      <label for="email">Email tài khoản</label>
+      <input id="email" name="email" type="email" required maxlength="254" placeholder="ban@email.com"/>
+      <label for="note">Ghi chú (không bắt buộc)</label>
+      <textarea id="note" name="note" rows="3" maxlength="500" placeholder="Tên hồ sơ con, lý do nếu muốn..."></textarea>
+      <button type="submit">Gửi yêu cầu xóa</button>
+    </form>
+    <p class="note">Hoặc gửi trực tiếp: <a href="mailto:hotro_familysafe@gmail.com?subject=Yeu%20cau%20xoa%20tai%20khoan%20FamilySafe">hotro_familysafe@gmail.com</a> · 0865 052 262</p>
+  </div>
+</main>
+<script>
+  document.getElementById("delete-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    var email = document.getElementById("email").value.trim();
+    var note = document.getElementById("note").value.trim();
+    var body = "Toi yeu cau xoa tai khoan FamilySafe va toan bo du lieu tren may chu.\n\nEmail: " + email;
+    if (note) body += "\nGhi chu: " + note;
+    window.location.href = "mailto:hotro_familysafe@gmail.com"
+      + "?subject=" + encodeURIComponent("Yeu cau xoa tai khoan FamilySafe")
+      + "&body=" + encodeURIComponent(body);
+  });
+</script>
+</body>
+</html>
