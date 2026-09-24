@@ -3,40 +3,83 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>FamilySafe · Xóa tài khoản</title>
+  <title>FamilySafe · Delete account</title>
+  <meta name="description" content="Delete your FamilySafe account in the app or by email. Server data is removed and cannot be restored."/>
   <link rel="stylesheet" href="../assets/style.css"/>
 </head>
 <body>
-<main class="narrow">
-  <nav><a href="../privacy/">Quyền riêng tư</a> · <a href="../terms/">Điều khoản</a></nav>
-  <h1>Xóa tài khoản FamilySafe</h1>
-  <div class="card">
-    <p>Xóa tài khoản sẽ xóa hồ sơ bố/mẹ, hồ sơ con do bạn sở hữu, vị trí, thời gian dùng app, lịch, khu vực và phiên đăng nhập. Không khôi phục được.</p>
-    <h2>Cách 1 — Trong app (nhanh)</h2>
-    <p>Mở FamilySafe → Cài đặt → Xóa tài khoản. Tick xác nhận, gõ <strong>XOA</strong>. Dữ liệu trên máy chủ bị xóa ngay.</p>
-    <h2>Cách 2 — Gửi yêu cầu trên web</h2>
-    <p>Điền email đã đăng ký. Chúng tôi nhận yêu cầu qua hộp thư hỗ trợ và xóa tài khoản cùng dữ liệu trên máy chủ (thường trong 48 giờ, tối đa 7 ngày).</p>
-    <form id="delete-form">
-      <label for="email">Email tài khoản</label>
-      <input id="email" name="email" type="email" required maxlength="254" placeholder="ban@email.com"/>
-      <label for="note">Ghi chú (không bắt buộc)</label>
-      <textarea id="note" name="note" rows="3" maxlength="500" placeholder="Tên hồ sơ con, lý do nếu muốn..."></textarea>
-      <button type="submit">Gửi yêu cầu xóa</button>
-    </form>
-    <p class="note">Hoặc gửi trực tiếp: <a href="mailto:hotro_familysafe@gmail.com?subject=Yeu%20cau%20xoa%20tai%20khoan%20FamilySafe">hotro_familysafe@gmail.com</a> · 0865 052 262</p>
-  </div>
-</main>
-<script>
-  document.getElementById("delete-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    var email = document.getElementById("email").value.trim();
-    var note = document.getElementById("note").value.trim();
-    var body = "Toi yeu cau xoa tai khoan FamilySafe va toan bo du lieu tren may chu.\n\nEmail: " + email;
-    if (note) body += "\nGhi chu: " + note;
-    window.location.href = "mailto:hotro_familysafe@gmail.com"
-      + "?subject=" + encodeURIComponent("Yeu cau xoa tai khoan FamilySafe")
-      + "&body=" + encodeURIComponent(body);
-  });
-</script>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="../"><span class="mark" aria-hidden="true">🛡</span>FamilySafe</a>
+      <nav class="nav">
+        <a href="../"><span data-lang="vi">Pháp lý</span><span data-lang="en" hidden>Legal</span></a>
+        <a href="../privacy/"><span data-lang="vi">Quyền riêng tư</span><span data-lang="en" hidden>Privacy</span></a>
+        <a href="../terms/"><span data-lang="vi">Điều khoản</span><span data-lang="en" hidden>Terms</span></a>
+        <a class="active" href="./"><span data-lang="vi">Xóa tài khoản</span><span data-lang="en" hidden>Delete account</span></a>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-set-lang="vi" aria-pressed="true">VI</button>
+          <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <p class="kicker" data-lang="vi">Xóa tài khoản</p>
+      <p class="kicker" data-lang="en" hidden>Delete account</p>
+      <h1 data-lang="vi">Xóa tài khoản và dữ liệu trên máy chủ</h1>
+      <h1 data-lang="en" hidden>Delete your account and server data</h1>
+      <p class="lede" data-lang="vi">Xóa sẽ gỡ hồ sơ bố/mẹ, hồ sơ con do bạn sở hữu, vị trí, thời gian dùng app, lịch, khu vực và phiên đăng nhập. Không khôi phục được.</p>
+      <p class="lede" data-lang="en" hidden>Deletion removes the parent profile, child profiles you own, location, app-time, schedules, zones, and sessions. This cannot be undone.</p>
+    </section>
+    <div class="card">
+      <div data-lang="vi">
+        <h2>Cách 1 — Trong app (nhanh)</h2>
+        <p>Mở FamilySafe → Cài đặt → Xóa tài khoản. Xác nhận và gõ <strong>XOA</strong>. Dữ liệu trên máy chủ bị xóa ngay.</p>
+        <h2>Cách 2 — Gửi yêu cầu trên web</h2>
+        <p>Điền email đã đăng ký. Chúng tôi nhận qua hộp thư hỗ trợ và xóa tài khoản cùng dữ liệu trên máy chủ (thường trong 48 giờ, tối đa 7 ngày).</p>
+      </div>
+      <div data-lang="en" hidden>
+        <h2>Option 1 — In the app (fastest)</h2>
+        <p>Open FamilySafe → Settings → Delete account. Confirm and type <strong>XOA</strong>. Server data is removed immediately.</p>
+        <h2>Option 2 — Web request</h2>
+        <p>Enter the email on the account. We receive it in support mail and delete the account and server data (usually within 48 hours, at most 7 days).</p>
+      </div>
+      <form id="delete-form">
+        <label for="email"><span data-lang="vi">Email tài khoản</span><span data-lang="en" hidden>Account email</span></label>
+        <input id="email" name="email" type="email" required maxlength="254" autocomplete="email" placeholder="you@email.com"/>
+        <label for="note"><span data-lang="vi">Ghi chú (không bắt buộc)</span><span data-lang="en" hidden>Note (optional)</span></label>
+        <textarea id="note" name="note" rows="3" maxlength="500" placeholder=""></textarea>
+        <button class="btn btn-danger" type="submit">
+          <span data-lang="vi">Gửi yêu cầu xóa</span>
+          <span data-lang="en" hidden>Send delete request</span>
+        </button>
+      </form>
+      <p class="note" data-lang="vi">Hoặc gửi trực tiếp: <a href="mailto:hotro_familysafe@gmail.com?subject=Yeu%20cau%20xoa%20tai%20khoan%20FamilySafe">hotro_familysafe@gmail.com</a> · 0865 052 262</p>
+      <p class="note" data-lang="en" hidden>Or email <a href="mailto:hotro_familysafe@gmail.com?subject=FamilySafe%20account%20deletion">hotro_familysafe@gmail.com</a> · 0865 052 262</p>
+    </div>
+  </main>
+  <footer class="foot">
+    <div class="wrap">
+      <p data-lang="vi">Hỗ trợ: <a href="mailto:hotro_familysafe@gmail.com">hotro_familysafe@gmail.com</a> · 0865 052 262</p>
+      <p data-lang="en" hidden>Support: <a href="mailto:hotro_familysafe@gmail.com">hotro_familysafe@gmail.com</a> · 0865 052 262</p>
+    </div>
+  </footer>
+  <script src="../assets/site.js"></script>
+  <script>
+    document.getElementById("delete-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      var email = document.getElementById("email").value.trim();
+      var note = document.getElementById("note").value.trim();
+      var en = document.documentElement.lang === "en";
+      var body = en
+        ? "I request deletion of my FamilySafe account and all server data.\n\nEmail: " + email
+        : "Toi yeu cau xoa tai khoan FamilySafe va toan bo du lieu tren may chu.\n\nEmail: " + email;
+      if (note) body += (en ? "\nNote: " : "\nGhi chu: ") + note;
+      window.location.href = "mailto:hotro_familysafe@gmail.com"
+        + "?subject=" + encodeURIComponent(en ? "FamilySafe account deletion" : "Yeu cau xoa tai khoan FamilySafe")
+        + "&body=" + encodeURIComponent(body);
+    });
+  </script>
 </body>
 </html>

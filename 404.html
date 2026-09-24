@@ -3,13 +3,28 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>FamilySafe · Không tìm thấy</title>
+  <title>FamilySafe · Not found</title>
   <link rel="stylesheet" href="assets/style.css"/>
 </head>
 <body>
-<main>
-  <h1>Không tìm thấy trang</h1>
-  <p><a href="./">Về trang pháp lý FamilySafe</a></p>
-</main>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="./"><span class="mark" aria-hidden="true">🛡</span>FamilySafe</a>
+      <nav class="nav">
+        <a href="./"><span data-lang="vi">Pháp lý</span><span data-lang="en" hidden>Legal</span></a>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-set-lang="vi" aria-pressed="true">VI</button>
+          <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <h1 data-lang="vi">Không tìm thấy trang</h1>
+    <h1 data-lang="en" hidden>Page not found</h1>
+    <p data-lang="vi"><a href="./">Về trang pháp lý FamilySafe</a></p>
+    <p data-lang="en" hidden><a href="./">Back to FamilySafe legal pages</a></p>
+  </main>
+  <script src="assets/site.js"></script>
 </body>
 </html>

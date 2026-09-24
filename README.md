@@ -1,17 +1,18 @@
-# FamilySafe — trang pháp lý (GitHub Pages)
+# FamilySafe — legal pages (GitHub Pages)
 
-Repo tĩnh để Play Console và app mở được Privacy / Điều khoản / Xóa tài khoản.
+Public Privacy, Terms, and Account deletion pages for Play Console and the FamilySafe app.
 
-## Bật Pages
+Vietnamese and English are on the same URL. The VI / EN control is stored in the browser.
 
-1. GitHub → repo này → **Settings** → **Pages**
+## Pages
+
+1. GitHub → this repo → **Settings** → **Pages**
 2. **Source**: Deploy from a branch
 3. **Branch**: `main` / `/ (root)` → Save
-4. Đợi 1–2 phút. URL sẽ là:
 
 - https://Quang-Phuc.github.io/familysafe-server-policy/
 - https://Quang-Phuc.github.io/familysafe-server-policy/privacy/
 - https://Quang-Phuc.github.io/familysafe-server-policy/terms/
 - https://Quang-Phuc.github.io/familysafe-server-policy/delete-account/
 
-Dán 3 URL cuối vào Play Console (Privacy policy, Terms, Account deletion).
+Paste the last three URLs into Play Console (Privacy policy, Terms, Account deletion).
