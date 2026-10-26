@@ -61,9 +61,10 @@
         </ul>
         <p>Không bật GPS im lặng 24/7. Lịch sử vị trí trên máy chủ giữ tối đa 7 ngày rồi xóa. Vị trí có thể chậm hoặc lệch khi máy con yếu sóng, ở trong nhà, pin yếu hoặc vừa tắt màn hình.</p>
         <h2>7. Quyền Trợ năng trên máy con</h2>
-        <p>Máy con dùng AccessibilityService. Trước khi mở Cài đặt Android, app hiện màn công bố full-screen với hai nút Decline / Accept và ô xác nhận. Thoát trang (Back / Home) không được tính là đồng ý. Chỉ sau Accept mới mở trang Trợ năng.</p>
-        <p>Quyền này chỉ lấy <strong>tên gói ứng dụng đang mở</strong> (app interactions) để hiện màn hình khi hết giờ chơi hoặc đang giờ học.</p>
-        <p>FamilySafe <strong>không</strong>: đọc hay lưu tin nhắn, mật khẩu, nội dung màn hình; lọc phím; đổi cài đặt máy ngoài giờ chơi đã thống nhất; chặn gỡ FamilySafe trong Cài đặt Android. FamilySafe không phải công cụ hỗ trợ người khuyết tật và khai isAccessibilityTool = Không.</p>
+        <p>Máy con dùng API AccessibilityService. Trước khi mở Cài đặt Android, app hiện hộp thoại xin phép với hai nút rõ ràng: Decline / Không đồng ý và Agree / Đồng ý. Không dùng một nút Continue/OK, không dùng công tắc làm đồng ý, không tự đóng. Back / Home / rời trang không được tính là đồng ý. Chỉ sau khi bấm Agree mới mở trang Trợ năng.</p>
+        <p><strong>Dữ liệu thu thập:</strong> Page views and taps in app / Lượt xem trang và số lần chạm vào trang trong ứng dụng — cụ thể là tên gói ứng dụng đang mở và sự kiện đổi cửa sổ khi con mở / chuyển app. Không ghi nội dung lần chạm, tin nhắn hay mật khẩu.</p>
+        <p><strong>Vì sao / tính năng:</strong> giới hạn giờ chơi trong ngày, giờ học, tạm nghỉ / khung giờ — để hiện màn tạm nghỉ đúng app.</p>
+        <p>FamilySafe <strong>không</strong>: đọc hay lưu tin nhắn, mật khẩu, chữ trên màn hình; lọc phím; chặn gỡ FamilySafe trong Cài đặt Android. Không phải công cụ hỗ trợ người khuyết tật (isAccessibilityTool = Không).</p>
         <p>Tắt bất cứ lúc nào: Cài đặt Android → Trợ năng → FamilySafe.</p>
         <h2>8. Trẻ em</h2>
         <p>Người tạo tài khoản phải từ 18 tuổi. Máy con do bố mẹ / người giám hộ cài và giám sát. Chúng tôi không thu thập dữ liệu từ trẻ để quảng cáo và không nhắm FamilySafe vào trẻ như người dùng chính.</p>
@@ -99,9 +100,10 @@
         </ul>
         <p>We do not run silent GPS 24/7. Location history on the server is kept for at most 7 days, then deleted. A fix can be late or off if the phone has weak signal, is indoors, is low on battery, or the screen was just turned off.</p>
         <h2>7. Accessibility on the child device</h2>
-        <p>The child device uses AccessibilityService. Before Android Settings open, the app shows a dedicated full-screen disclosure with two always-visible buttons (Decline and Accept) and a required checkbox. Leaving the page with Back or Home is not consent. Accessibility settings open only after Accept.</p>
-        <p>This permission only reads the <strong>package name of the app currently on screen</strong> (app interactions) so FamilySafe can show a lock overlay when family play-time is over or during study hours.</p>
-        <p>FamilySafe does <strong>not</strong> read or store messages, passwords, or on-screen content; does not filter key events; does not change device settings outside agreed play-time; and does not prevent uninstall of FamilySafe in Android Settings. FamilySafe is not an assistive tool for people with disabilities (isAccessibilityTool = No).</p>
+        <p>The child device uses the AccessibilityService API. Before Android Settings open, the app shows a consent dialog with two clear buttons: Decline and Agree. It does not use a single Continue/OK button, a toggle as consent, or an auto-dismissing notice. Back / Home / leaving the page is not consent. Accessibility settings open only after Agree.</p>
+        <p><strong>Data collected:</strong> Page views and taps in app (Lượt xem trang và số lần chạm vào trang trong ứng dụng) — specifically the package name of the app in the foreground and window-change events when the child opens or switches apps. We do not record the content of taps, messages, or passwords.</p>
+        <p><strong>Why / related features:</strong> daily play-time limits, study hours, and rest / schedule windows — so a lock overlay can appear on the correct app.</p>
+        <p>FamilySafe does <strong>not</strong> read or store messages, passwords, or on-screen text; does not filter keystrokes; and does not prevent uninstall of FamilySafe in Android Settings. It is not an assistive tool for people with disabilities (isAccessibilityTool = No).</p>
         <p>Turn off anytime: Android Settings → Accessibility → FamilySafe.</p>
         <h2>8. Children</h2>
         <p>The account holder must be 18 or older. The child device is installed and supervised by a parent or legal guardian. We do not collect children’s data for ads and do not treat children as the primary users of FamilySafe.</p>
