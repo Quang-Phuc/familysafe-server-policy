@@ -27,10 +27,10 @@
     <section class="hero">
       <p class="kicker" data-lang="vi">Chính sách quyền riêng tư</p>
       <p class="kicker" data-lang="en" hidden>Privacy policy</p>
-      <h1 data-lang="vi">Chúng tôi chỉ dùng dữ liệu để bố mẹ bảo vệ con</h1>
-      <h1 data-lang="en" hidden>We use data only so a parent can protect a child</h1>
-      <p class="lede" data-lang="vi">Cập nhật 24/09/2026. FamilySafe do nhóm FamilySafe vận hành. App dành cho người giám hộ từ 18 tuổi — không phải app cho trẻ tự tải và chơi.</p>
-      <p class="lede" data-lang="en" hidden>Updated 24 September 2026. Operated by the FamilySafe team. The app is for legal guardians aged 18 and over — it is not an app for children to download and play.</p>
+      <h1 data-lang="vi">Chúng tôi chỉ dùng dữ liệu để cả nhà thống nhất giờ chơi</h1>
+      <h1 data-lang="en" hidden>We use data only so a family can agree on screen-time</h1>
+      <p class="lede" data-lang="vi">Cập nhật 26/10/2026. FamilySafe do nhóm FamilySafe vận hành. App dành cho người giám hộ từ 18 tuổi — không phải app cho trẻ tự tải và chơi.</p>
+      <p class="lede" data-lang="en" hidden>Updated 26 October 2026. Operated by the FamilySafe team. The app is for legal guardians aged 18 and over — it is not an app for children to download and play.</p>
       <p class="meta">hotro.familysafe@gmail.com · 0865 052 262</p>
     </section>
     <div class="card">
@@ -61,7 +61,10 @@
         </ul>
         <p>Không bật GPS im lặng 24/7. Lịch sử vị trí trên máy chủ giữ tối đa 7 ngày rồi xóa. Vị trí có thể chậm hoặc lệch khi máy con yếu sóng, ở trong nhà, pin yếu hoặc vừa tắt màn hình.</p>
         <h2>7. Quyền Trợ năng trên máy con</h2>
-        <p>Dùng để biết ứng dụng nào đang mở và hiện lớp khóa khi bố mẹ chặn, hạn giờ hoặc khóa theo lịch. FamilySafe không phải công cụ hỗ trợ người khuyết tật và không khai là accessibility tool.</p>
+        <p>Máy con dùng AccessibilityService. Trước khi mở Cài đặt Android, app hiện màn công bố full-screen với hai nút Decline / Accept và ô xác nhận. Thoát trang (Back / Home) không được tính là đồng ý. Chỉ sau Accept mới mở trang Trợ năng.</p>
+        <p>Quyền này chỉ lấy <strong>tên gói ứng dụng đang mở</strong> (app interactions) để hiện màn hình khi hết giờ chơi hoặc đang giờ học.</p>
+        <p>FamilySafe <strong>không</strong>: đọc hay lưu tin nhắn, mật khẩu, nội dung màn hình; lọc phím; đổi cài đặt máy ngoài giờ chơi đã thống nhất; chặn gỡ FamilySafe trong Cài đặt Android. FamilySafe không phải công cụ hỗ trợ người khuyết tật và khai isAccessibilityTool = Không.</p>
+        <p>Tắt bất cứ lúc nào: Cài đặt Android → Trợ năng → FamilySafe.</p>
         <h2>8. Trẻ em</h2>
         <p>Người tạo tài khoản phải từ 18 tuổi. Máy con do bố mẹ / người giám hộ cài và giám sát. Chúng tôi không thu thập dữ liệu từ trẻ để quảng cáo và không nhắm FamilySafe vào trẻ như người dùng chính.</p>
         <h2>9. Lưu trữ và xóa</h2>
@@ -96,7 +99,10 @@
         </ul>
         <p>We do not run silent GPS 24/7. Location history on the server is kept for at most 7 days, then deleted. A fix can be late or off if the phone has weak signal, is indoors, is low on battery, or the screen was just turned off.</p>
         <h2>7. Accessibility on the child device</h2>
-        <p>Used only to detect the foreground app and show a lock overlay when a parent rule blocks, time-limits, or schedule-locks that app. FamilySafe is not an assistive tool for people with disabilities and is not declared as an accessibility tool.</p>
+        <p>The child device uses AccessibilityService. Before Android Settings open, the app shows a dedicated full-screen disclosure with two always-visible buttons (Decline and Accept) and a required checkbox. Leaving the page with Back or Home is not consent. Accessibility settings open only after Accept.</p>
+        <p>This permission only reads the <strong>package name of the app currently on screen</strong> (app interactions) so FamilySafe can show a lock overlay when family play-time is over or during study hours.</p>
+        <p>FamilySafe does <strong>not</strong> read or store messages, passwords, or on-screen content; does not filter key events; does not change device settings outside agreed play-time; and does not prevent uninstall of FamilySafe in Android Settings. FamilySafe is not an assistive tool for people with disabilities (isAccessibilityTool = No).</p>
+        <p>Turn off anytime: Android Settings → Accessibility → FamilySafe.</p>
         <h2>8. Children</h2>
         <p>The account holder must be 18 or older. The child device is installed and supervised by a parent or legal guardian. We do not collect children’s data for ads and do not treat children as the primary users of FamilySafe.</p>
         <h2>9. Retention and deletion</h2>
